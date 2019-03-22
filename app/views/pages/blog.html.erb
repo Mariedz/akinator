@@ -1,0 +1,10 @@
+<h1>Mon 1er blog en rails</h1>
+<p>blablablablabla</p>
+
+<% @articles.each do |article| %>
+<div class="article">
+	<h2><%= article["title"] %></h2>
+	<p><%= article["content"] %></p>
+</div>
+<% end %>
+
