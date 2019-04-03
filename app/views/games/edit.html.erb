@@ -1,4 +1,21 @@
-<h1>Games#edit</h1>
-<p>Find me in app/views/games/edit.html.erb</p>
+<div class="wrapper" style="background-image: url('https://images.pexels.com/photos/52732/non-incense-smell-dark-52732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');"><h1>Jouons !</h1>
+<p>Réponds aux différentes questions et je trouverai la personne à qui tu penses.</p>
 
-<%= link_to( "Continuer", game_path(1), method: :patch, class: "btn btn-warning" ) %>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+<h3><%= @question %></h3>
+<%= link_to "OUI", game_path(id: @game_id, question_id: @question_id + 1, answer: "OUI"), method: :patch, class: "btn btn-outline-light" %>
+<%= link_to "NON", game_path(id: @game_id, question_id: @question_id + 1, answer: "NON"), method: :patch, class: "btn btn-outline-danger"  %>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+<%= link_to( "Continuer", game_path(1), method: :patch, class: "btn btn-warning continuer" ) %>
+</div>
+</div>
+</div>
